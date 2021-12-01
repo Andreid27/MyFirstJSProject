@@ -1,0 +1,94 @@
+body{
+    font-family: 'Poppins', sans-serif;  
+    background-image: url('./images/bg-intro-mobile.png');
+    background-color: rgb(241, 127, 127);
+    margin-top: 3rem;
+}
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
+    
+}
+
+#opening-text{
+    font-weight: 400;
+    margin-bottom: 5vh;
+}
+.trial-btn{
+    border-radius: 0.6rem;
+    border-style: none;
+    background-color: hsl(248, 32%, 49%);
+    color: whitesmoke;
+    border-bottom-color: gray;
+    box-shadow: 5px 10px 8px rgba(0, 0, 0, 0.34);
+    padding: 0.3rem;
+    width: 99%;
+}
+
+#try_for_free{
+    margin-bottom: 0.5rem;
+}
+.pret{
+    padding: 0%;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    margin-bottom: 0.9rem;
+    font-weight: 400;
+}
+
+#line{
+    display:inline;
+    font-weight: 400;
+}
+.panou-date{
+background-color: white;
+margin-top: 1rem;
+color:gainsboro;
+padding: 1rem;
+border-radius: 1rem;
+}
+
+.panou-date > input{
+    margin-top: 1rem;
+    width: 100%;
+    height: 3rem;
+    border-style: solid;
+    border-radius: 0.2rem;
+    border-color: rgb(220, 220, 220);
+    color: rgb(49, 49, 49);
+    padding-left: 3%;
+    max-width: 90%;
+}
+.ActiveText{
+    color:black;
+    font-weight: 700;
+}
+
+#terms{
+    font-size: 00.5rem;
+}
+
+#start{
+    background-color: hsl(154, 59%, 51%);
+    border-radius: 0.2rem;
+    color: whitesmoke;
+    border-style: none;
+    box-shadow: 2px 2px 1px hsl(154, 56%, 47%) ;
+    margin-top: 1rem;
+    width: 95%;
+    padding: 1rem;
+}
+
+#terms{
+    font: 0.7em sans-serif;
+}
+#terms > a{
+    font-family:'Poppins', sans-serif ;
+    color: rgb(236, 171, 171);
+    font-weight: 700;
+}
