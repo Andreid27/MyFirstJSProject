@@ -2,16 +2,23 @@ body{
     font-family: 'Poppins', sans-serif;  
     background-image: url('./images/bg-intro-mobile.png');
     background-color: rgb(241, 127, 127);
-    margin-top: 3rem;
+    /* margin-top: 3rem; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 
 .container{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color: white;
     text-align: center;
     padding: 0.5rem;
+    max-width: 550px;
     
 }
 
@@ -63,6 +70,8 @@ border-radius: 1rem;
     color: rgb(49, 49, 49);
     padding-left: 3%;
     max-width: 90%;
+    margin-left: 2%;
+    margin-right: 2% ;
 }
 .ActiveText{
     color:black;
@@ -91,6 +100,23 @@ border-radius: 1rem;
     font-family:'Poppins', sans-serif ;
     color: rgb(236, 171, 171);
     font-weight: 700;
+}
+
+.error-msg{
+    color:red;
+    font-size: 0.8rem;
+    text-align: right;
+    position: relative;
+
+    
+}
+.error-msg > img{
+    /* position:fixed; */
+    top:-3rem ;
+}
+
+.Error-color > input{ 
+border-color: red;
 }
 
 
