@@ -53,6 +53,8 @@ body{
     font-weight: 400;
 }
 .panou-date{
+display: flex;
+flex-direction: column;
 background-color: white;
 margin-top: 1rem;
 color:gainsboro;
@@ -72,6 +74,13 @@ border-radius: 1rem;
     max-width: 90%;
     margin-left: 2%;
     margin-right: 2% ;
+}
+
+.panou-date > span{
+    margin-right: 5%;
+    margin-top: 0.01rem;
+    font-size: 0.8rem;
+
 }
 .ActiveText{
     color:black;
@@ -107,12 +116,19 @@ border-radius: 1rem;
     font-size: 0.8rem;
     text-align: right;
     position: relative;
+    margin-top: -1rem;
 
     
 }
 .error-msg > img{
     /* position:fixed; */
     top:-3rem ;
+}
+
+.panou-date > img {
+top: -1.5rem;
+margin-left: 85%;
+max-width: 8%;
 }
 
 .Error-color > input{ 

@@ -69,17 +69,19 @@
        
            //for (i = 0, inputLength = inputElements.length; i < inputLength; i++) {
                inputId = element.id;
-               //inputType = inputElements[i].type;
-               inputValue=element.value       
+               inputValue=element.value
+               let inputClass=element.classList   
                //if (inputType === "text") {
-                 if (inputValue==="First Name" || inputValue==="Last Name" || inputValue==="Email Adress" ||inputValue==="Password" ||inputValue===`` ) {
+                 if ((inputValue==="First Name" || inputValue==="Last Name" || inputValue==="Email Adress" ||inputValue==="Password" ||inputValue===``)&inputClass!="Error-color" ) {
                    inputNode = document.getElementById(inputId);
                    //if (inputNode.value === "") {
                        var spanTag = document.createElement("span");
                        var imgTag = document.createElement("img");
                        imgTag.src = "./images/icon-error.svg"
                        imgTag.classList.add("error-msg")
-                       spanTag.innerHTML = `<span class="error-msg">${element.value} cannot be empty</span>`
+                      //  spanTag.classList.add("error-msg")`<span class=">${element.value} cannot be empty</span>`
+                       spanTag.append(element.value + " cannot be empty")
+                       spanTag.classList.add("error-msg")
                        inputNode.parentNode.insertBefore(spanTag, inputNode.nextSibling)
                        inputNode.parentNode.insertBefore(imgTag, inputNode.nextSibling)
                        makeError(element)
@@ -87,7 +89,13 @@
                   console.log("sa moara jiubilan daca mai intra") 
                  // }
                   }
+                  
           // }
+          if ((inputValue!="First Name" || inputValue!="Last Name" || inputValue!="Email Adress" ||inputValue!="Password" ||inputValue===``)&inputClass=="Error-color" ) {
+            makeDefault(element)
+            // errValid=false
+            console.log("a intrat si in cacat de data asta")
+          }
            console.log(errValid)
 
            return false; // Do Nothing
