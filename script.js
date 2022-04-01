@@ -26,6 +26,26 @@
       }
 }
 
+
+function removeError(element){
+  lastEl=element.value
+  element.classList.remove("Error-color")
+   element.classList.add("defaultText")
+   element.style.borderColor = "rgb(220, 220, 220)"
+   //console.log(element)
+}
+
+function deleteChild(element) {
+  var e = document.getElementById(element.id);
+  var first = e.firstElementChild;
+  while (first) {
+      first.remove();
+      first = e.firstElementChild;
+  }
+  console.log(element.id)
+}
+
+
  function restoreDefault(){
        if(FirstName.value===``)
        {element = FirstName
@@ -72,6 +92,16 @@
                inputValue=element.value
                let inputClass=element.classList   
                //if (inputType === "text") {
+                if (inputValue!=``&inputClass=="Error-color" ) {
+                  removeError(element)
+                  deleteChild(element)
+                  // inputNode = document.getElementById(inputId);
+                  // inputNode.parentNode.removeChild(spanTag)
+                  // inputNode.parentNode.insertBefore(imgTag, inputNode.nextSibling)
+                  // errValid=false
+                  console.log("a intrat si in cacat de data asta")
+                  console.log(element)
+                }
                  if ((inputValue==="First Name" || inputValue==="Last Name" || inputValue==="Email Adress" ||inputValue==="Password" ||inputValue===``)&inputClass!="Error-color" ) {
                    inputNode = document.getElementById(inputId);
                    //if (inputNode.value === "") {
@@ -86,26 +116,19 @@
                        inputNode.parentNode.insertBefore(imgTag, inputNode.nextSibling)
                        makeError(element)
                        errValid=true
-                  console.log("sa moara jiubilan daca mai intra") 
-                 // }
-                  }
-                  
-          // }
-          if ((inputValue!="First Name" || inputValue!="Last Name" || inputValue!="Email Adress" ||inputValue!="Password" ||inputValue===``)&inputClass=="Error-color" ) {
-            makeDefault(element)
-            // errValid=false
-            console.log("a intrat si in cacat de data asta")
-          }
+                  console.log("sa moara jiubilan daca mai intra")
+                 }
+
            console.log(errValid)
 
-           return false; // Do Nothing
+           return errValid; // Do Nothing
        
        }
        console.log("mesaj2"+errValid)
 
 function checkComplete(){
             for(let i=0; i<4;i++)
-            validateForm(vectorInput[i])
-              
-
+            if (validateForm(vectorInput[i])===false){
+              location.replace("www.dinca.one") 
+              }
 }
