@@ -4,6 +4,7 @@
  let EmailAdress = document.querySelector('#EmailAdress')
  let Password = document.querySelector('#Password')
  let vectorInput = [FirstName,LastName,EmailAdress,Password]
+ let vectorInputBOOL = [false,false,false,false]
  let errValid= false
  
  function makeDefault(element){
@@ -36,15 +37,173 @@ function removeError(element){
 }
 
 function deleteChild(element) {
-  var e = document.getElementById(element.id);
-  var first = e.firstElementChild;
-  while (first) {
-      first.remove();
-      first = e.firstElementChild;
-  }
-  console.log(element.id)
+
+  //FirstName  NU DEPINDE DE NIMENI
+  if(element.id==="FirstName"){
+    document.getElementById("panou-date").removeChild(document.getElementById("panou-date").children[1]);
+    document.getElementById("panou-date").removeChild(document.getElementById("panou-date").children[1]);
+    }
+  if(FirstName.className==="Error-color") // DACA FirstName este pe EROARE
+  {
+    if(element.id==="LastName"){
+    document.getElementById("panou-date").removeChild(document.getElementById("panou-date").children[4]);
+    document.getElementById("panou-date").removeChild(document.getElementById("panou-date").children[4]);
+    }
+    if(LastName.className==="Error-color"){//DACA LastName este pe EROARE
+      if(element.id==="EmailAdress"){
+      document.getElementById("panou-date").removeChild(document.getElementById("panou-date").children[7]);
+      document.getElementById("panou-date").removeChild(document.getElementById("panou-date").children[7]);
+      }
+      if(EmailAdress.className==="Error-color"){
+        if(element.id==="Password"){
+          document.getElementById("panou-date").removeChild(document.getElementById("panou-date").children[10]);
+          document.getElementById("panou-date").removeChild(document.getElementById("panou-date").children[10]);
+          }
+      }
+}
 }
 
+
+if(FirstName.className!="Error-color") // DACA FirstName NU este pe EROARE
+{
+  if(element.id==="LastName"){
+  document.getElementById("panou-date").removeChild(document.getElementById("panou-date").children[2]);
+  document.getElementById("panou-date").removeChild(document.getElementById("panou-date").children[2]);
+  }
+  if(LastName.className==="Error-color"){//DACA LastName este pe EROARE
+    if(element.id==="EmailAdress"){
+    document.getElementById("panou-date").removeChild(document.getElementById("panou-date").children[5]);
+    document.getElementById("panou-date").removeChild(document.getElementById("panou-date").children[5]);
+    }
+    if(EmailAdress.className==="Error-color"){
+      if(element.id==="Password"){
+        document.getElementById("panou-date").removeChild(document.getElementById("panou-date").children[8]);
+        document.getElementById("panou-date").removeChild(document.getElementById("panou-date").children[8]);
+        }
+    }
+}
+
+}
+
+
+
+
+if(FirstName.className!="Error-color") // DACA FirstName NU este pe EROARE
+{
+  if(LastName.className!="Error-color"){//DACA LastName  NU este pe EROARE
+    if(element.id==="EmailAdress"){
+    document.getElementById("panou-date").removeChild(document.getElementById("panou-date").children[3]);
+    document.getElementById("panou-date").removeChild(document.getElementById("panou-date").children[3]);
+    }
+    if(EmailAdress.className==="Error-color"){
+      if(element.id==="Password"){
+        document.getElementById("panou-date").removeChild(document.getElementById("panou-date").children[6]);
+        document.getElementById("panou-date").removeChild(document.getElementById("panou-date").children[6]);
+        }
+    }
+}
+
+}
+
+
+if(FirstName.className!="Error-color") // DACA FirstName NU este pe EROARE
+{
+  if(LastName.className!="Error-color"){//DACA LastName  NU este pe EROARE
+    if(EmailAdress.className!="Error-color"){
+      if(element.id==="Password"){
+        document.getElementById("panou-date").removeChild(document.getElementById("panou-date").children[4]);
+        document.getElementById("panou-date").removeChild(document.getElementById("panou-date").children[4]);
+        }
+    }
+}
+
+} //Pana aici E bine sigur
+
+
+if(FirstName.className==="Error-color") // DACA FirstName NU este pe EROARE
+{
+  if(LastName.className==="Error-color"){//DACA LastName  NU este pe EROARE
+    if(EmailAdress.className!="Error-color"){
+      if(element.id==="Password"){
+        document.getElementById("panou-date").removeChild(document.getElementById("panou-date").children[8]);
+        document.getElementById("panou-date").removeChild(document.getElementById("panou-date").children[8]);
+        }
+    }
+}
+
+}
+
+
+if(FirstName.className!="Error-color") // DACA FirstName NU este pe EROARE
+{
+  if(LastName.className==="Error-color"){//DACA LastName  NU este pe EROARE
+    if(EmailAdress.className!="Error-color"){
+      if(element.id==="Password"){
+        document.getElementById("panou-date").removeChild(document.getElementById("panou-date").children[6]);
+        document.getElementById("panou-date").removeChild(document.getElementById("panou-date").children[6]);
+        }
+    }
+}
+
+}
+
+
+
+if(FirstName.className==="Error-color") // DACA FirstName este pe EROARE
+{
+  if(LastName.className!="Error-color"){//DACA LastName  NU este pe EROARE
+    if(element.id==="EmailAdress"){
+      document.getElementById("panou-date").removeChild(document.getElementById("panou-date").children[5]);
+      document.getElementById("panou-date").removeChild(document.getElementById("panou-date").children[5]);
+      }
+    if(EmailAdress.className==="Error-color"){
+      if(element.id==="Password"){
+        document.getElementById("panou-date").removeChild(document.getElementById("panou-date").children[8]);
+        document.getElementById("panou-date").removeChild(document.getElementById("panou-date").children[8]);
+        }
+    }
+}
+
+}
+
+if(FirstName.className==="Error-color") // DACA FirstName este pe EROARE
+{
+  if(LastName.className!="Error-color"){//DACA LastName  NU este pe EROARE
+    if(EmailAdress.className!="Error-color"){
+      if(element.id==="Password"){
+        document.getElementById("panou-date").removeChild(document.getElementById("panou-date").children[6]);
+        document.getElementById("panou-date").removeChild(document.getElementById("panou-date").children[6]);
+
+        }
+    }
+}
+
+}
+} //AICI AM TERMINAT CAZURILE PENTRU Erori
+
+
+
+
+
+
+
+function CheckBOOLS(){
+  for(let i=0; i<4;i++)
+    {if(vectorInput[i].className!="Error-color"){
+      vectorInputBOOL[i]=true}
+    }
+
+    let k=0 //contor
+    for(let i=0; i<4;i++)
+    {if (vectorInputBOOL[i]===true){
+      k++
+    }
+    }
+    console.log(k)
+    if(k===4)
+    {return true}
+    
+}
 
  function restoreDefault(){
        if(FirstName.value===``)
@@ -86,21 +245,13 @@ function deleteChild(element) {
            let inputValue
        
            inputElements = document.getElementsByTagName("input");
-       
-           //for (i = 0, inputLength = inputElements.length; i < inputLength; i++) {
                inputId = element.id;
                inputValue=element.value
                let inputClass=element.classList   
-               //if (inputType === "text") {
+
                 if (inputValue!=``&inputClass=="Error-color" ) {
                   removeError(element)
                   deleteChild(element)
-                  // inputNode = document.getElementById(inputId);
-                  // inputNode.parentNode.removeChild(spanTag)
-                  // inputNode.parentNode.insertBefore(imgTag, inputNode.nextSibling)
-                  // errValid=false
-                  console.log("a intrat si in cacat de data asta")
-                  console.log(element)
                 }
                  if ((inputValue==="First Name" || inputValue==="Last Name" || inputValue==="Email Adress" ||inputValue==="Password" ||inputValue===``)&inputClass!="Error-color" ) {
                    inputNode = document.getElementById(inputId);
@@ -114,9 +265,8 @@ function deleteChild(element) {
                        spanTag.classList.add("error-msg")
                        inputNode.parentNode.insertBefore(spanTag, inputNode.nextSibling)
                        inputNode.parentNode.insertBefore(imgTag, inputNode.nextSibling)
-                       makeError(element)
                        errValid=true
-                  console.log("sa moara jiubilan daca mai intra")
+                       makeError(element)
                  }
 
            console.log(errValid)
@@ -127,8 +277,15 @@ function deleteChild(element) {
        console.log("mesaj2"+errValid)
 
 function checkComplete(){
-            for(let i=0; i<4;i++)
-            if (validateForm(vectorInput[i])===false){
-              location.replace("www.dinca.one") 
-              }
+            for(let i=0; i<4;i++){
+            // {if(validateForm(vectorInput[i])===false)
+            //   location.replace("www.dinca.one")
+
+            // }
+            validateForm(vectorInput[i])
+            }
+            if(CheckBOOLS()==true){
+              location.replace("www.dinca.one")
+
+}
 }
