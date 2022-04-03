@@ -285,7 +285,7 @@ function checkComplete(){
             validateForm(vectorInput[i])
             }
             if(CheckBOOLS()==true){
-              location.replace("www.dinca.one")
+              location.replace("http://www.dinca.one")
 
 }
 }
